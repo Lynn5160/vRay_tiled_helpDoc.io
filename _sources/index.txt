@@ -12,7 +12,8 @@ DataTime：[17:23:13 2016-09-05]
 
 1.添加环境变量，变量名：MAYA_MODULE_PATH  变量值：`\\BJSERVER2\mnt\rj_plugins\module
 <http://github.com>`_。
-#.拖拽run_ui.py到Maya中创建Shelf Icon。
+
+2.拖拽run_ui.py到Maya中创建Shelf Icon。
 
 使用说明：
 ---------
