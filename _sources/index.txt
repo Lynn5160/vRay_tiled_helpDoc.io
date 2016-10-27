@@ -1,0 +1,87 @@
+.. -vRay_tiled
+vRay_tiled
+===========
+Script Name：vRay_tiled |
+Version： 1.1.0 |
+Author：Carol Rong |
+DataTime：[17:23:13 2016-09-05]
+
+安装说明：
+---------
+`\\BJSERVER2\mnt\rj_plugins\vRay_tiled \1.1.0 <http://github.com>`_
+
+1.添加环境变量，变量名：MAYA_MODULE_PATH  变量值：`\\BJSERVER2\mnt\rj_plugins\module
+<http://github.com>`_。
+#.拖拽run_ui.py到Maya中创建Shelf Icon。
+
+使用说明：
+---------
+插件安装完成之后，点击自定义的快捷方式：
+
+.. figure:: \_static\images\create.png
+会弹出如下窗口：
+
+.. figure:: \_static\images\vRay_tiled.png
+
+红框中的路径是目前场景中所有的贴图路径。
+
+- (exr) : 表示当前贴图文件存在已转换好的.exr文件，但是未与File节点连接。
+- [~~] : 表示当前路径下的贴图文件是.exr文件，但是文件丢失不存在。
+- [exr] : 表示当前贴图文件是转换后的.exr文件，且已于File节点连接。
+- ‘   ’ : 表示当前贴图文件不存在.exr文件。
+
+.. figure:: \_static\images\useSceneTextures.png
+表示根据文件中的贴图列表进行贴图的格式转换。
+
+.. figure:: \_static\images\Refresh.png
+表示刷新列表中贴图的贴图连接状态和贴图的选择状态。
+
+.. figure:: \_static\images\SelectAll.png
+只能选择未能连接.exr文件的贴图项。批量选择，便于执行Delete.exr。
+
+eg:
+
+.. figure :: \_static\images\SelectAll_eg.png
+
+.. figure :: \_static\images\SelectUntiled.png
+只能选择未转换过.exr文件的贴图项。批量选择，便于执行Create.exr。
+
+eg:
+
+.. figure :: \_static\images\SelectUntiled_eg.png
+
+.. figure :: \_static\images\TotalFiles.png
+表示的是该渲染文件中存在的贴图文件的数量。
+
+.. figure :: \_static\images\Create_exr.png
+表示对选择项执行创建.exr文件的操作。
+
+点击创建时会在原贴图路径下创建后缀为_tiled.exr的文件，且将file节点上的贴图文件替换成转换
+后的_tiled.exr文件文件。
+
+执行结束后点击Refresh即可查看更新后的贴图状态。
+
+eg:
+
+.. figure :: \_static\images\Create_exr_eg_1.png
+
+.. figure :: \_static\images\Create_exr_eg_2.png
+
+.. figure :: \_static\images\Create_exr_eg_3.png
+
+.. figure :: \_static\images\Delete.png
+表示对选择项执行删除.exr文件的操作。
+
+点击删除时会先判断选择项文件是否是.exr文件。如果不是.exr文件，存在对应的.exr文件则执行删除。
+如果是.exr文件，则首先判断路径下是否还存在原格式贴图。原格式贴图文件存在则将file节点上连接上原格式贴图后删除.exr文件即可。
+若不存在原格式贴图，则保留.exr文件不执行删除操作。执行结束后点击Refresh即可查看更新后的贴图状
+态。
+
+.. figure :: \_static\images\UseTexturesinFolder.png
+选择 Use Textures in Folder 就是通过指定文件夹进行.exr文件的格式转换。
+
+.. figure :: \_static\images\TextureFolder.png
+选择需要转换贴图的文件夹路径。
+
+.. figure :: \_static\images\SearchinSubFolders.png
+选择则表示文件夹下的子文件内文件也执行创建，反知不执行。

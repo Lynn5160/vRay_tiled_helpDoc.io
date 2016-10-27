@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>vRay_tiled &mdash; liya_TestDoc 2.5.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="liya_TestDoc 2.5.1 documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> liya_TestDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <!-- Local TOC -->
+                <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">vRay_tiled</a><ul>
+<li><a class="reference internal" href="#id1">安装说明：</a></li>
+<li><a class="reference internal" href="#id2">使用说明：</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">liya_TestDoc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>vRay_tiled</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vray-tiled">
+<h1>vRay_tiled<a class="headerlink" href="#vray-tiled" title="Permalink to this headline">¶</a></h1>
+<p>Script Name：vRay_tiled |
+Version： 1.1.0 |
+Author：Carol Rong |
+DataTime：[17:23:13 2016-09-05]</p>
+<div class="section" id="id1">
+<h2>安装说明：<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://github.com">\BJSERVER2mntrj_pluginsvRay_tiled 1.1.0</a></p>
+<p>1.添加环境变量，变量名：MAYA_MODULE_PATH  变量值：<a class="reference external" href="http://github.com">\BJSERVER2mntrj_pluginsmodule</a>。
+#.拖拽run_ui.py到Maya中创建Shelf Icon。</p>
+</div>
+<div class="section" id="id2">
+<h2>使用说明：<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>插件安装完成之后，点击自定义的快捷方式：</p>
+<div class="figure">
+<img alt="_static\images\create.png" src="_static\images\create.png" />
+</div>
+<p>会弹出如下窗口：</p>
+<div class="figure">
+<img alt="_static\images\vRay_tiled.png" src="_static\images\vRay_tiled.png" />
+</div>
+<p>红框中的路径是目前场景中所有的贴图路径。</p>
+<ul class="simple">
+<li>(exr) : 表示当前贴图文件存在已转换好的.exr文件，但是未与File节点连接。</li>
+<li>[~~] : 表示当前路径下的贴图文件是.exr文件，但是文件丢失不存在。</li>
+<li>[exr] : 表示当前贴图文件是转换后的.exr文件，且已于File节点连接。</li>
+<li>‘   ’ : 表示当前贴图文件不存在.exr文件。</li>
+</ul>
+<div class="figure">
+<img alt="_static\images\useSceneTextures.png" src="_static\images\useSceneTextures.png" />
+</div>
+<p>表示根据文件中的贴图列表进行贴图的格式转换。</p>
+<div class="figure">
+<img alt="_static\images\Refresh.png" src="_static\images\Refresh.png" />
+</div>
+<p>表示刷新列表中贴图的贴图连接状态和贴图的选择状态。</p>
+<div class="figure">
+<img alt="_static\images\SelectAll.png" src="_static\images\SelectAll.png" />
+</div>
+<p>只能选择未能连接.exr文件的贴图项。批量选择，便于执行Delete.exr。</p>
+<p>eg:</p>
+<div class="figure">
+<img alt="_static\images\SelectAll_eg.png" src="_static\images\SelectAll_eg.png" />
+</div>
+<div class="figure">
+<img alt="_static\images\SelectUntiled.png" src="_static\images\SelectUntiled.png" />
+</div>
+<p>只能选择未转换过.exr文件的贴图项。批量选择，便于执行Create.exr。</p>
+<p>eg:</p>
+<div class="figure">
+<img alt="_static\images\SelectUntiled_eg.png" src="_static\images\SelectUntiled_eg.png" />
+</div>
+<div class="figure">
+<img alt="_static\images\TotalFiles.png" src="_static\images\TotalFiles.png" />
+</div>
+<p>表示的是该渲染文件中存在的贴图文件的数量。</p>
+<div class="figure">
+<img alt="_static\images\Create_exr.png" src="_static\images\Create_exr.png" />
+</div>
+<p>表示对选择项执行创建.exr文件的操作。</p>
+<p>点击创建时会在原贴图路径下创建后缀为_tiled.exr的文件，且将file节点上的贴图文件替换成转换
+后的_tiled.exr文件文件。</p>
+<p>执行结束后点击Refresh即可查看更新后的贴图状态。</p>
+<p>eg:</p>
+<div class="figure">
+<img alt="_static\images\Create_exr_eg_1.png" src="_static\images\Create_exr_eg_1.png" />
+</div>
+<div class="figure">
+<img alt="_static\images\Create_exr_eg_2.png" src="_static\images\Create_exr_eg_2.png" />
+</div>
+<div class="figure">
+<img alt="_static\images\Create_exr_eg_3.png" src="_static\images\Create_exr_eg_3.png" />
+</div>
+<div class="figure">
+<img alt="_static\images\Delete.png" src="_static\images\Delete.png" />
+</div>
+<p>表示对选择项执行删除.exr文件的操作。</p>
+<p>点击删除时会先判断选择项文件是否是.exr文件。如果不是.exr文件，存在对应的.exr文件则执行删除。
+如果是.exr文件，则首先判断路径下是否还存在原格式贴图。原格式贴图文件存在则将file节点上连接上原格式贴图后删除.exr文件即可。
+若不存在原格式贴图，则保留.exr文件不执行删除操作。执行结束后点击Refresh即可查看更新后的贴图状
+态。</p>
+<div class="figure">
+<img alt="_static\images\UseTexturesinFolder.png" src="_static\images\UseTexturesinFolder.png" />
+</div>
+<p>选择 Use Textures in Folder 就是通过指定文件夹进行.exr文件的格式转换。</p>
+<div class="figure">
+<img alt="_static\images\TextureFolder.png" src="_static\images\TextureFolder.png" />
+</div>
+<p>选择需要转换贴图的文件夹路径。</p>
+<div class="figure">
+<img alt="_static\images\SearchinSubFolders.png" src="_static\images\SearchinSubFolders.png" />
+</div>
+<p>选择则表示文件夹下的子文件内文件也执行创建，反知不执行。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, liya.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.5.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
